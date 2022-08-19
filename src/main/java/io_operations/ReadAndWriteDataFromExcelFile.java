@@ -8,15 +8,20 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class ReadAndWriteDataFromExcelFile {
     public static void main(String[] args) throws IOException, InvalidFormatException {
-        String project_home = System.getProperty("user.dir");
+        ExcelUtils excelUtils = new ExcelUtils("D:\\cucumber\\JulyTraining\\marks.xlsx");
+        ArrayList<Object> sheet1 = excelUtils.returnTheDataOfGivenRowInTheGivenSheet("Sheet1", 1222);
+        System.out.println(sheet1);
+
+       /* String project_home = System.getProperty("user.dir");
         File excelFile = new File(project_home + File.separator + "marks.xlsx");
-        /*if (excelFile.exists()) {
+        *//*if (excelFile.exists()) {
             excelFile.delete();
         }
-        excelFile.createNewFile();*/
+        excelFile.createNewFile();*//*
         Workbook workbook = null;
         FileOutputStream fileOutputStream = null;
         try {
@@ -33,6 +38,6 @@ public class ReadAndWriteDataFromExcelFile {
         } finally {
             workbook.close();
             fileOutputStream.close();
-        }
+        }*/
     }
 }

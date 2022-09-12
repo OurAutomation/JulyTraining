@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Test Annotations">
+        <classes>
+            <class name="testNG.TestNGAnnotations">
+                <!--<methods>
+                    <exclude name="addTwoNumbers"/>
+                    <include name="addThreeNumbers"/>
+                    <include name="addFourNumbers"/>
+                </methods>-->
+            </class>
+            <class name="testNG.TestNGTestAnnotation"/>
+            <class name="testNG.Annotations"/>
+        </classes>
+    </test>
+</suite>

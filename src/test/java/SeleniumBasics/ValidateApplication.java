@@ -41,24 +41,7 @@ public class ValidateApplication {
         } else {
             System.err.println("Phishing page is loaded");
         }
-        WebElement element = driver.findElement(By.id("contact-link"));
-        System.out.println("Contact link displayed :: " + element.isDisplayed());
-//        WebElement login = driver.findElement(By.className("login"));
-//        WebElement login = driver.findElement(By.linkText("Sign in"));
-        WebElement login = driver.findElement(By.partialLinkText("Sign "));
-        login.click();
-        List<WebElement> input = driver.findElements(By.tagName("input"));
-        System.out.println("Number of input boxes :: " + input.size());
-        WebElement emailInputBox = driver.findElement(By.id("email"));
-        emailInputBox.clear();
-        emailInputBox.sendKeys("kongara.bharghav@gmail.com");
-        Thread.sleep(2000);
-        WebElement passwordInputBox = driver.findElement(By.name("passwd"));
-        passwordInputBox.clear();
-        passwordInputBox.sendKeys("Testing@1234");
-        Thread.sleep(2000);
-        WebElement loginButton = driver.findElement(By.name("SubmitLogin"));
-        loginButton.click();
+
         Thread.sleep(7000);
         driver.close();//Close the browser
     }

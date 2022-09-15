@@ -10,6 +10,7 @@ public class Application_Sanity extends Base {
 
     @Test
     public void A_validateTitle_HardAssertion() {
+        launchApplication();
         String title = driver.getTitle();// Validate the title
         Assert.assertEquals(title,titleOfThePage,"The title of the application not matching");
         String currentUrl = driver.getCurrentUrl();

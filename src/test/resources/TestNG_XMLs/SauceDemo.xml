@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SauceDemo">
+    <parameter name="environment" value="SauceDemo"/>
+    <parameter name="browser" value="chrome"/>
+    <test verbose="2" preserve-order="true" name="Dashboard Sanity">
+        <packages>
+           <package name="org.training.sauceDemo.Dashboard_Sanity"></package>
+        </packages>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Login Sanity">
+        <packages>
+            <package name="org.training.sauceDemo.Login_Sanity"></package>
+        </packages>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Validate Filter Functionality">
+        <packages>
+            <package name="org.training.sauceDemo.ValidateFilterFunctionality"></package>
+        </packages>
+    </test>
+</suite>
+
+
+        <!--<test verbose="2" preserve-order="true" name="Test Annotations">
+               <classes>
+                   <class name="testNG.TestNGAnnotations">
+                       &lt;!&ndash;<methods>
+                           <exclude name="addTwoNumbers"/>
+                           <include name="addThreeNumbers"/>
+                           <include name="addFourNumbers"/>
+                       </methods>&ndash;&gt;
+                   </class>
+                   <class name="testNG.TestNGTestAnnotation"/>
+                   <class name="testNG.Annotations"/>
+               </classes>
+           </test>-->

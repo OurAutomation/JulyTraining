@@ -5,61 +5,64 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.training.selenium.pageObjects.CartPage;
+import org.training.selenium.pageObjects.DashboardPage;
+import org.training.selenium.pageObjects.LoginPage;
 import org.training.selenium.utils.Base;
+import org.training.selenium.utils.EnvironmentDetails;
+import org.training.selenium.utils.TestDataUtils;
 
 import java.util.List;
 
 public class Dashboard_Sanity extends Base {
-    String itemName = "Sauce Labs Backpack";
-    String itemName2 = "Sauce Labs Bike Light";
-    String xpathForAddToCartButton = "//div[text()='${itemname}' and @class='inventory_item_name']/ancestor::div[@class='inventory_item_label']/following-sibling::div[@class='pricebar']//button[text()='Add to cart']";
-    String xpathForRemoveButton = "//div[text()='${itemname}' and @class='inventory_item_name']/ancestor::div[@class='inventory_item_label']/following-sibling::div[@class='pricebar']//button[text()='Remove']";
+    LoginPage loginPage;
+    DashboardPage dashboardPage;
+    CartPage cartPage;
 
     @BeforeTest
     public void loadSauceDemoApplication() {
         launchSauceDemoApplication();
+        loginPage = new LoginPage(driver);
+        dashboardPage = new DashboardPage(driver);
+        cartPage = new CartPage(driver);
     }
 
     @Test
     public void login() {
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.name("password")).sendKeys("secret_sauce");
-        driver.findElement(By.xpath("//*[@id='login-button']")).click();
-        Assert.assertTrue(driver.findElement(By.id("react-burger-menu-btn")).isDisplayed(), "Login did not happen");
+        loginPage.loginAndValidate(EnvironmentDetails.getProperty("valid.username"),
+                EnvironmentDetails.getProperty("valid.password"));
     }
 
     @Test(dependsOnMethods = "login")
     public void addFirstProductToCartAndValidate() {
-        String xpathForItem = xpathForAddToCartButton.replace("${itemname}", itemName);
-        driver.findElement(By.xpath(xpathForItem)).click();
-        Assert.assertEquals(driver.findElement(By.className("shopping_cart_badge")).getText(), "1", "More number of elements are added to cart");
+        dashboardPage.addProductToCart(TestDataUtils.getProperty("itemName"));
+        Assert.assertEquals(dashboardPage.returnNumberOfProductsAdded(), "1", "More number of elements are added to cart");
     }
 
     @Test(dependsOnMethods = "login")
     public void addSecondProductToCartAndValidate() {
-        String xpathForItem = xpathForAddToCartButton.replace("${itemname}", itemName2);
-        driver.findElement(By.xpath(xpathForItem)).click();
-        Assert.assertEquals(driver.findElement(By.className("shopping_cart_badge")).getText(), "2", "More number of elements are added to cart");
+        dashboardPage.addProductToCart(TestDataUtils.getProperty("itemName2"));
+        Assert.assertEquals(dashboardPage.returnNumberOfProductsAdded(), "2", "More number of elements are added to cart");
     }
 
     @Test(dependsOnMethods = {"addFirstProductToCartAndValidate", "addSecondProductToCartAndValidate"})
     public void validateAddedItemsInCart() {
-        driver.findElement(By.className("shopping_cart_link")).click();
-        List<WebElement> elements = driver.findElements(By.xpath("//*[@class='cart_list']//*[@class=\"inventory_item_name\"]"));
-        Assert.assertEquals(elements.get(0).getText(), itemName, "The name of the products first added is not matching");
-        Assert.assertEquals(elements.get(1).getText(), itemName2, "The name of the products second added is not matching");
+        dashboardPage.clickOnShoppingCart();
+        List<String> productsAdded = cartPage.returnTheProductsAddedToTheCart();
+        Assert.assertEquals(productsAdded.get(0), TestDataUtils.getProperty("itemName"), "The name of the products first added is not matching");
+        Assert.assertEquals(productsAdded.get(1), TestDataUtils.getProperty("itemName2"), "The name of the products second added is not matching");
     }
 
     @Test(dependsOnMethods = "validateAddedItemsInCart")
     public void removeAProductAndValidate() throws InterruptedException {
-        driver.findElement(By.id("react-burger-menu-btn")).click();
-        driver.findElement(By.xpath("//*[contains(@class,\"menu-item\") and text()=\"All Items\"]")).click();
-        driver.findElement(By.xpath(xpathForRemoveButton.replace("${itemname}", itemName2))).click();
+        dashboardPage.clickOnMenuButton();
+        dashboardPage.clickOnAllItems();
+        dashboardPage.removeProductFromTheCart(TestDataUtils.getProperty("itemName2"));
         Thread.sleep(1000);
-        Assert.assertEquals(driver.findElement(By.className("shopping_cart_badge")).getText(), "1", "More number of elements are added to cart");
-        driver.findElement(By.className("shopping_cart_link")).click();
-        List<WebElement> elements = driver.findElements(By.xpath("//*[@class='cart_list']//*[@class=\"inventory_item_name\"]"));
-        Assert.assertEquals(elements.get(0).getText(), itemName, "The name of the products first added is not matching");
-        Assert.assertEquals(elements.size(),1,"Removed elements are still getting displayed in the cart");
+        Assert.assertEquals(dashboardPage.returnNumberOfProductsAdded(), "1", "More number of elements are added to cart");
+        dashboardPage.clickOnShoppingCart();
+        List<String> productsAdded = cartPage.returnTheProductsAddedToTheCart();
+        Assert.assertEquals(productsAdded.get(0), TestDataUtils.getProperty("itemName"), "The name of the products first added is not matching");
+        Assert.assertEquals(productsAdded.size(), 1, "Removed elements are still getting displayed in the cart");
     }
 }

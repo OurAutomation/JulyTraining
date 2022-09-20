@@ -3,22 +3,23 @@
 <suite name="SauceDemo">
     <parameter name="environment" value="SauceDemo"/>
     <parameter name="browser" value="chrome"/>
+
     <test verbose="2" preserve-order="true" name="Dashboard Sanity">
-        <packages>
-           <package name="org.training.sauceDemo.Dashboard_Sanity"></package>
-        </packages>
+        <classes>
+           <class name="org.training.sauceDemo.Dashboard_Sanity"></class>
+        </classes>
     </test>
 
     <test verbose="2" preserve-order="true" name="Login Sanity">
-        <packages>
-            <package name="org.training.sauceDemo.Login_Sanity"></package>
-        </packages>
+        <classes>
+            <class name="org.training.sauceDemo.Login_Sanity"></class>
+        </classes>
     </test>
 
     <test verbose="2" preserve-order="true" name="Validate Filter Functionality">
-        <packages>
-            <package name="org.training.sauceDemo.ValidateFilterFunctionality"></package>
-        </packages>
+        <classes>
+            <class name="org.training.sauceDemo.ValidateFilterFunctionality"></class>
+        </classes>
     </test>
 </suite>
 

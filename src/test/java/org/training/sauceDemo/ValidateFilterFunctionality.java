@@ -57,10 +57,10 @@ public class ValidateFilterFunctionality extends Base {
     }
 
     @Test(priority = 3)
-    public void validateFilterFunctionalityLowToHigh() throws InterruptedException {
+    public void validateFilterFunctionalityLowToHigh() {
         dashboardPage.selectGivenFilter(TestDataUtils.getProperty("priceLowToHighFilterText"));
-        List<String> inventoryStrings = dashboardPage.returnTheProductNamesDisplayed();
-        List<String> actualOrder = new ArrayList<>();
+        List<Float> inventoryStrings = dashboardPage.returnTheProductPricesDisplayed();
+        List<Float> actualOrder = new ArrayList<>();
         actualOrder.addAll(inventoryStrings);
         Collections.sort(inventoryStrings);
         Assert.assertEquals(inventoryStrings, actualOrder, "Price Low to High filter functionality is not working as expected");
@@ -69,8 +69,8 @@ public class ValidateFilterFunctionality extends Base {
     @Test(priority = 4)
     public void validateFilterFunctionalityHighToLow() throws InterruptedException {
         dashboardPage.selectGivenFilter(TestDataUtils.getProperty("priceHighToLowFilterText"));
-        List<String> inventoryStrings = dashboardPage.returnTheProductNamesDisplayed();
-        List<String> actualOrder = new ArrayList<>();
+        List<Float> inventoryStrings = dashboardPage.returnTheProductPricesDisplayed();
+        List<Float> actualOrder = new ArrayList<>();
         actualOrder.addAll(inventoryStrings);
         Collections.sort(inventoryStrings);
         Collections.reverse(inventoryStrings);

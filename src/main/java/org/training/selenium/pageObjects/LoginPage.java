@@ -4,29 +4,29 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.training.selenium.utils.ObjectRepository;
+import org.training.selenium.utils.SeleniumUtils;
 
-public class LoginPage {
-    WebDriver driver;
+public class LoginPage extends SeleniumUtils {
 
     public LoginPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public void loginAndValidate(String username, String password) {
-        driver.findElement(ObjectRepository.getLocator("loginPage.username.inputBox")).sendKeys(username);
-        driver.findElement(ObjectRepository.getLocator("loginPage.password.inputBox")).sendKeys(password);
-        driver.findElement(ObjectRepository.getLocator("loginPage.continue.button")).click();
-        Assert.assertTrue(driver.findElement(ObjectRepository.getLocator("dashboardPage.menu.button")).isDisplayed(), "Login did not happen");
+        sendKeys(ObjectRepository.getLocator("loginPage.username.inputBox"), username);
+        sendKeys(ObjectRepository.getLocator("loginPage.password.inputBox"), password);
+        click(ObjectRepository.getLocator("loginPage.continue.button"));
+        Assert.assertTrue(isDisplayed(ObjectRepository.getLocator("dashboardPage.menu.button")), "Login did not happen");
     }
 
     public void login(String username, String password) {
-        driver.findElement(ObjectRepository.getLocator("loginPage.username.inputBox")).sendKeys(username);
-        driver.findElement(ObjectRepository.getLocator("loginPage.password.inputBox")).sendKeys(password);
-        driver.findElement(ObjectRepository.getLocator("loginPage.continue.button")).click();
+        sendKeys(ObjectRepository.getLocator("loginPage.username.inputBox"), username);
+        sendKeys(ObjectRepository.getLocator("loginPage.password.inputBox"), password);
+        click(ObjectRepository.getLocator("loginPage.continue.button"));
     }
 
     public boolean isInvalidUsernameErrorMessageDisplayed() {
-        return driver.findElement(ObjectRepository.getLocator("loginPage.invalidUser.errorMessage")).isDisplayed();
+        return isDisplayed(ObjectRepository.getLocator("loginPage.invalidUser.errorMessage"));
     }
 
 }

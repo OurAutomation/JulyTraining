@@ -6,58 +6,63 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.training.selenium.utils.ObjectRepository;
+import org.training.selenium.utils.SeleniumUtils;
 import org.training.selenium.utils.TestDataUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class DashboardPage {
-    WebDriver driver;
+public class DashboardPage extends SeleniumUtils {
     String xpathForAddToCartButton = ObjectRepository.getProperty("dashBoardPage.addToCart.xpath");
     String xpathForRemoveButton = ObjectRepository.getProperty("dashBoardPage.removeFromCart.xpath");
 
     public DashboardPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public boolean isDashboardPageLoaded() {
-        return driver.findElement(ObjectRepository.getLocator("dashboardPage.menu.button")).isDisplayed();
+        return isDisplayed(ObjectRepository.getLocator("dashboardPage.menu.button"));
     }
 
     public void addProductToCart(String productName) {
         String xpathForItem = xpathForAddToCartButton.replace("${itemname}", productName);
-        driver.findElement(By.xpath(xpathForItem)).click();
+        click(By.xpath(xpathForItem));
     }
 
     public String returnNumberOfProductsAdded() {
-        return driver.findElement(ObjectRepository.getLocator("dashboardPage.cart.icon")).getText();
+        return getText(ObjectRepository.getLocator("dashboardPage.cart.icon"));
     }
 
     public void clickOnShoppingCart() {
-        driver.findElement(ObjectRepository.getLocator("dashboardPage.cart.link")).click();
+        click(ObjectRepository.getLocator("dashboardPage.cart.link"));
     }
 
     public void removeProductFromTheCart(String product) {
-        driver.findElement(By.xpath(xpathForRemoveButton.replace("${itemname}", product))).click();
+        click(By.xpath(xpathForRemoveButton.replace("${itemname}", product)));
     }
 
     public void clickOnMenuButton() {
-        driver.findElement(ObjectRepository.getLocator("dashboardPage.menu.button")).click();
+        click(ObjectRepository.getLocator("dashboardPage.menu.button"));
     }
 
     public void clickOnAllItems() {
-        driver.findElement(ObjectRepository.getLocator("dashboardPage.allItems.menuButton")).click();
+        click(ObjectRepository.getLocator("dashboardPage.allItems.menuButton"));
     }
 
     public void selectGivenFilter(String filterName) {
-        Select select = new Select(driver.findElement(ObjectRepository.getLocator("dashboardPage.filter.dropdown")));
-        select.selectByVisibleText(filterName);
+        select(ObjectRepository.getLocator("dashboardPage.filter.dropdown"),filterName);
+        hardWait(1);
+    }
+
+    public List<Float> returnTheProductPricesDisplayed() {
+        List<Float> inventoryPrices = new ArrayList<>();
+        getText(findElements(ObjectRepository.getLocator("dashboardPage.productPrice.text"))).forEach(e-> {
+            inventoryPrices.add(Float.parseFloat(e.replace("$","")));
+        });
+        return inventoryPrices;
     }
 
     public List<String> returnTheProductNamesDisplayed() {
-        List<WebElement> elements = driver.findElements(ObjectRepository.getLocator("dashboardPage.productNames.text"));
-        List<String> productNames = new ArrayList<>();
-        elements.forEach(e -> productNames.add(e.getText()));
-        return productNames;
+        return getText(findElements(ObjectRepository.getLocator("dashboardPage.productNames.text")));
     }
 }

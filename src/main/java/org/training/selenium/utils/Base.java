@@ -9,12 +9,12 @@ import java.time.Duration;
 
 public class Base {
     public static WebDriver driver;
-//    public String URL = "http://automationpractice.com/index.php";
+    public String URL = "http://automationpractice.com/index.php";
     //public String URL = "https://demo.automationtesting.in/Register.html";
 
     @BeforeSuite
     @Parameters(value = {"environment", "browser"})
-    public void beforeSuite(String environment, String browser) {
+    public void beforeSuite(@Optional("SauceDemo") String environment, @Optional("chrome") String browser) {
         EnvironmentDetails.loadProperties(environment);
         TestDataUtils.loadProperties(environment);
         ObjectRepository.loadProperties(environment);
@@ -25,13 +25,17 @@ public class Base {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
     @AfterTest
     public void shutDown() {
         driver.quit(); // to close the complete browser
         //driver.close(); // to close only one window
+    }
+
+    public void launchApplication() {
+        driver.get(URL);
     }
 
     public void launchSauceDemoApplication() {

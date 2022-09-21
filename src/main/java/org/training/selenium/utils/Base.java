@@ -12,7 +12,7 @@ public class Base {
     public String URL = "http://automationpractice.com/index.php";
     //public String URL = "https://demo.automationtesting.in/Register.html";
 
-    @BeforeSuite
+    @BeforeSuite(alwaysRun = true)
     @Parameters(value = {"environment", "browser"})
     public void beforeSuite(@Optional("SauceDemo") String environment, @Optional("chrome") String browser) {
         EnvironmentDetails.loadProperties(environment);
@@ -20,7 +20,7 @@ public class Base {
         ObjectRepository.loadProperties(environment);
     }
 
-    @BeforeTest
+    @BeforeTest(alwaysRun = true)
     public void launchDriver() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -28,7 +28,7 @@ public class Base {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
-    @AfterTest
+    @AfterTest(alwaysRun = true)
     public void shutDown() {
         driver.quit(); // to close the complete browser
         //driver.close(); // to close only one window

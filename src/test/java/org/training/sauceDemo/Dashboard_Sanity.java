@@ -19,7 +19,7 @@ public class Dashboard_Sanity extends Base {
     DashboardPage dashboardPage;
     CartPage cartPage;
 
-    @BeforeTest
+    @BeforeTest(description = "Initializing the page Objects",alwaysRun = true)
     public void loadSauceDemoApplication() {
         launchSauceDemoApplication();
         loginPage = new LoginPage(driver);
@@ -27,13 +27,13 @@ public class Dashboard_Sanity extends Base {
         cartPage = new CartPage(driver);
     }
 
-    @Test
+    @Test(groups = {"sanity"})
     public void login() {
         loginPage.loginAndValidate(EnvironmentDetails.getProperty("valid.username"),
                 EnvironmentDetails.getProperty("valid.password"));
     }
 
-    @Test(dependsOnMethods = "login")
+    @Test(dependsOnMethods = "login",groups = {"sanity"})
     public void addFirstProductToCartAndValidate() {
         dashboardPage.addProductToCart(TestDataUtils.getProperty("itemName"));
         Assert.assertEquals(dashboardPage.returnNumberOfProductsAdded(), "1", "More number of elements are added to cart");

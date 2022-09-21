@@ -13,13 +13,13 @@ public class Login_Sanity extends Base {
     LoginPage loginPage;
     DashboardPage dashboardPage;
 
-    @BeforeTest
+    @BeforeTest(alwaysRun = true)
     public void beforeTest() {
         loginPage = new LoginPage(driver);
         dashboardPage = new DashboardPage(driver);
     }
 
-    @Test(dataProvider = "swagLabLoginTestData", dataProviderClass = DataProviders.class)
+    @Test(dataProvider = "swagLabLoginTestData",groups = {"sanity"},dataProviderClass = DataProviders.class, description = "Validate login functionality with valid and invalid credentials")
     public void login(String userName, String password, boolean isValid) {
         launchSauceDemoApplication();
         loginPage.login(userName, password);

@@ -22,20 +22,20 @@ public class ValidateFilterFunctionality extends Base {
     LoginPage loginPage;
     DashboardPage dashboardPage;
 
-    @BeforeTest
+    @BeforeTest(alwaysRun = true)
     public void loadSauceDemoApplication() {
         launchSauceDemoApplication();
         loginPage = new LoginPage(driver);
         dashboardPage = new DashboardPage(driver);
     }
 
-    @Test(priority = 0)
+    @Test(priority = 0, groups = {"sanity","regression"})
     public void login() {
         loginPage.loginAndValidate(EnvironmentDetails.getProperty("valid.username"),
                 EnvironmentDetails.getProperty("valid.password"));
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = {"sanity"})
     public void validateFilterFunctionalityAtoZ() throws InterruptedException {
         dashboardPage.selectGivenFilter(TestDataUtils.getProperty("AToZFilterText"));
         List<String> inventoryStrings = dashboardPage.returnTheProductNamesDisplayed();
@@ -45,7 +45,7 @@ public class ValidateFilterFunctionality extends Base {
         Assert.assertEquals(inventoryStrings, actualOrder, "A to Z filter functionality is not working as expected");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2,invocationCount = 2)
     public void validateFilterFunctionalityZtoA() throws InterruptedException {
         dashboardPage.selectGivenFilter(TestDataUtils.getProperty("ZToAFilterText"));
         List<String> inventoryStrings = dashboardPage.returnTheProductNamesDisplayed();

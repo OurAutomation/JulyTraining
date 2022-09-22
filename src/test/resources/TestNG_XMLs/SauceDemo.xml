@@ -10,16 +10,16 @@
     </listeners>
 
 
-   <!-- <test verbose="2" preserve-order="true" name="Dashboard Sanity">
-        <groups>
+    <test verbose="2" preserve-order="true" name="Dashboard Sanity">
+        <!--<groups>
             <run>
                 <include name="sanity"/>
             </run>
-        </groups>
+        </groups>-->
         <classes>
             <class name="org.training.sauceDemo.Dashboard_Sanity"></class>
         </classes>
-    </test>-->
+    </test>
 
    <!-- <test verbose="2" preserve-order="true" name="Login Sanity">
         &lt;!&ndash;<groups>
@@ -32,16 +32,16 @@
         </classes>
     </test>-->
 
-    <test verbose="2" preserve-order="true" name="Validate Filter Functionality">
-       <!-- <groups>
+    <!--<test verbose="2" preserve-order="true" name="Validate Filter Functionality">
+       &lt;!&ndash; <groups>
             <run>
                 <include name="sanity"/>
             </run>
-        </groups>-->
+        </groups>&ndash;&gt;
         <classes>
             <class name="org.training.sauceDemo.ValidateFilterFunctionality"></class>
         </classes>
-    </test>
+    </test>-->
 </suite>
 
 

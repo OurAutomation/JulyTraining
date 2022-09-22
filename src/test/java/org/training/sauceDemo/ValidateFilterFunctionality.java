@@ -47,7 +47,9 @@ public class ValidateFilterFunctionality extends Base {
 
     @Test(priority = 2,invocationCount = 2)
     public void validateFilterFunctionalityZtoA() throws InterruptedException {
+        System.out.println("Started validating filter functionality");
         dashboardPage.selectGivenFilter(TestDataUtils.getProperty("ZToAFilterText"));
+        System.out.println("Selected filter");
         List<String> inventoryStrings = dashboardPage.returnTheProductNamesDisplayed();
         List<String> actualOrder = new ArrayList<>();
         actualOrder.addAll(inventoryStrings);

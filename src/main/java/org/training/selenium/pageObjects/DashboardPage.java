@@ -50,19 +50,34 @@ public class DashboardPage extends SeleniumUtils {
     }
 
     public void selectGivenFilter(String filterName) {
-        select(ObjectRepository.getLocator("dashboardPage.filter.dropdown"),filterName);
+        select(ObjectRepository.getLocator("dashboardPage.filter.dropdown"), filterName);
         hardWait(1);
     }
 
     public List<Float> returnTheProductPricesDisplayed() {
         List<Float> inventoryPrices = new ArrayList<>();
-        getText(findElements(ObjectRepository.getLocator("dashboardPage.productPrice.text"))).forEach(e-> {
-            inventoryPrices.add(Float.parseFloat(e.replace("$","")));
+        getText(findElements(ObjectRepository.getLocator("dashboardPage.productPrice.text"))).forEach(e -> {
+            inventoryPrices.add(Float.parseFloat(e.replace("$", "")));
         });
         return inventoryPrices;
     }
 
     public List<String> returnTheProductNamesDisplayed() {
         return getText(findElements(ObjectRepository.getLocator("dashboardPage.productNames.text")));
+    }
+
+    public void clickOnFacebookIcon() {
+        click(ObjectRepository.getLocator("dashboardPage.facebook.icon"));
+        hardWait(2);
+    }
+
+    public void clickOnTwitterIcon() {
+        click(ObjectRepository.getLocator("dashboardPage.twitter.icon"));
+        hardWait(2);
+    }
+
+    public void clickOnLinkedInIcon() {
+        click(ObjectRepository.getLocator("dashboardPage.linkedIn.icon"));
+        hardWait(2);
     }
 }

@@ -18,7 +18,7 @@ public class SeleniumUtils {
 
     public SeleniumUtils(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
     public void waitUntilElementIsVisible(By by) {
@@ -149,8 +149,29 @@ public class SeleniumUtils {
         driver.switchTo().window(windowHandle);
     }
 
+    public void closeTheTab(String windowHandle) {
+        switchToWindow(windowHandle);
+       driver.close();
+    }
+
     public void openNewTab() {
         driver.switchTo().newWindow(WindowType.TAB);
+    }
+
+    public void navigateForward() {
+        driver.navigate().forward();
+    }
+
+    public void navigateBackward() {
+        driver.navigate().back();
+    }
+
+    public void refresh() {
+        driver.navigate().refresh();
+    }
+
+    public void navigateTo(String url) {
+        driver.navigate().to(url);
     }
 
     public void openNewWindow() {

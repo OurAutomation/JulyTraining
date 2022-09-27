@@ -1,0 +1,99 @@
+18:34:01.364 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+18:34:01.427 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+18:34:07.241 [main] INFO  ValidateSocialMediaNetworksLinked - Login to the application
+18:34:08.026 [main] INFO  ValidateSocialMediaNetworksLinked - Logged into application
+18:35:19.144 [main] INFO  ValidateSocialMediaNetworksLinked - Present window handle :: CDwindow-FD487AC9B7419A22A94553CB51A4E549
+18:35:34.905 [main] INFO  ValidateSocialMediaNetworksLinked - Present window is :: Swag Labs
+18:35:46.058 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+18:35:46.099 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+18:35:51.219 [main] INFO  ValidateSocialMediaNetworksLinked - Login to the application
+18:35:51.833 [main] INFO  ValidateSocialMediaNetworksLinked - Logged into application
+18:36:12.946 [main] INFO  ValidateSocialMediaNetworksLinked - Present window handle :: CDwindow-D9DA9E53F252E8B64900E27E862A20C8
+18:37:54.541 [main] INFO  ValidateSocialMediaNetworksLinked - Present window is :: Swag Labs
+18:39:13.846 [main] INFO  ValidateSocialMediaNetworksLinked - Present window handle :: CDwindow-D9DA9E53F252E8B64900E27E862A20C8
+18:39:16.306 [main] INFO  ValidateSocialMediaNetworksLinked - Present window is :: Swag Labs
+18:39:33.336 [main] INFO  ValidateSocialMediaNetworksLinked - Present window handle :: CDwindow-D9DA9E53F252E8B64900E27E862A20C8
+18:41:02.396 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+18:41:02.453 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+18:41:06.986 [main] INFO  ValidateSocialMediaNetworksLinked - Login to the application
+18:41:08.410 [main] INFO  ValidateSocialMediaNetworksLinked - Logged into application
+18:41:08.424 [main] INFO  ValidateSocialMediaNetworksLinked - Present window handle :: CDwindow-ABAB3CE973B649973C5EA18869911311
+18:41:10.864 [main] INFO  ValidateSocialMediaNetworksLinked - Present window is :: Swag Labs
+18:41:11.035 [main] INFO  ValidateSocialMediaNetworksLinked - Present window handle :: CDwindow-ABAB3CE973B649973C5EA18869911311
+18:41:13.467 [main] INFO  ValidateSocialMediaNetworksLinked - Present window is :: Swag Labs
+18:41:14.050 [main] INFO  ValidateSocialMediaNetworksLinked - Present window handle :: CDwindow-ABAB3CE973B649973C5EA18869911311
+18:41:16.384 [main] INFO  ValidateSocialMediaNetworksLinked - Present window is :: Swag Labs
+18:42:06.925 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+18:42:07.007 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+18:42:10.806 [main] INFO  ValidateSocialMediaNetworksLinked - Login to the application
+18:42:12.143 [main] INFO  ValidateSocialMediaNetworksLinked - Logged into application
+18:42:12.156 [main] INFO  ValidateSocialMediaNetworksLinked - Present window handle :: CDwindow-285C8EEE64043DC8B548C41C2D48F5C1
+18:42:19.657 [main] INFO  ValidateSocialMediaNetworksLinked - Present window is :: Swag Labs
+18:42:19.688 [main] INFO  ValidateSocialMediaNetworksLinked - Present window handle :: CDwindow-285C8EEE64043DC8B548C41C2D48F5C1
+18:42:26.877 [main] INFO  ValidateSocialMediaNetworksLinked - Present window is :: Swag Labs
+18:42:27.023 [main] INFO  ValidateSocialMediaNetworksLinked - Present window handle :: CDwindow-285C8EEE64043DC8B548C41C2D48F5C1
+18:42:34.462 [main] INFO  ValidateSocialMediaNetworksLinked - Present window is :: Swag Labs
+18:47:09.980 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+18:47:10.043 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+18:47:17.223 [main] INFO  ValidateSocialMediaNetworksLinked - Login to the application
+18:47:18.155 [main] INFO  ValidateSocialMediaNetworksLinked - Logged into application
+18:47:18.179 [main] INFO  ValidateSocialMediaNetworksLinked - Present window handle :: CDwindow-C22974F40B66012A2BE8FE2D19BCD771
+18:47:25.358 [main] INFO  ValidateSocialMediaNetworksLinked - Present window is :: Swag Labs
+18:47:25.408 [main] INFO  ValidateSocialMediaNetworksLinked - Present window handle :: CDwindow-C22974F40B66012A2BE8FE2D19BCD771
+18:47:32.619 [main] INFO  ValidateSocialMediaNetworksLinked - Present window is :: Swag Labs
+18:47:32.693 [main] INFO  ValidateSocialMediaNetworksLinked - Present window handle :: CDwindow-C22974F40B66012A2BE8FE2D19BCD771
+18:47:39.895 [main] INFO  ValidateSocialMediaNetworksLinked - Present window is :: Swag Labs
+18:52:05.451 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+18:52:05.477 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:00:26.571 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:00:26.599 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:01:22.990 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:01:23.052 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:01:43.990 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:01:44.055 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:03:10.549 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:03:10.620 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:06:29.578 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:06:29.658 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:08:24.138 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:08:24.200 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:10:18.729 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:10:18.800 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:11:24.509 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:11:24.583 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:13:27.873 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:13:27.965 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:14:19.833 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:14:19.920 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:18:42.265 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:18:42.357 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:21:33.780 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:21:33.859 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:22:49.567 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:22:49.642 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:33:36.083 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:33:36.165 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:34:37.632 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:34:37.692 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:35:56.259 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:35:56.326 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:41:23.753 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:41:23.835 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:43:16.376 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:43:16.515 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:43:47.502 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:43:47.570 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:45:08.167 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:45:08.228 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:46:04.256 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:46:04.348 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:50:43.358 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:50:43.425 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:57:26.010 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:57:26.081 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:58:09.200 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:58:09.268 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:58:53.379 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:58:53.456 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+19:59:40.568 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+19:59:40.838 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Sravan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
